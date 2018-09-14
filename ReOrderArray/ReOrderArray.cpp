@@ -13,14 +13,14 @@ public:
         for(std::vector<int>::iterator iter = array.begin(); iter != array.end()-1; iter++)
         {
             std::cout << "\nlooking for " << *iter << " and " << *(iter+1) << std::endl
-            	<< "*iter%2 = " << (*iter)%2 << ", *(iter+1)%2 = " << *(iter+1)%2 << std::endl
-            	<< "!(*iter%2) && (*(iter+1)%2) = " << (!(*iter%2) && (*(iter+1)%2)) << std::endl;
+            	<< "swap? ";
         	if(!(*iter%2) && (*(iter+1)%2))
         	{
+        		std::cout << "yes\n";
         		temp = *iter; *iter = *(iter+1); *(iter+1) = temp;
         		if(iter != array.begin()) iter = iter-2;
-        		std::cout << "\nnext target: " << *iter << std::endl;
         	}
+        	else std::cout << "no\n";
         }
     }
 };
@@ -32,10 +32,14 @@ int main(int argc, char* argv[])
 	
 	for(i = 1; i < argc; i++) iArray[i-1] = atoi(argv[i]);
 
+	std::cout << "Original array: ";
 	std::vector<int> array(iArray, iArray + sizeof(iArray)/sizeof(int));
-	for(i = 1; i < argc; i++) std::cout << array[i-1] << std::endl;
+	for(i = 1; i < argc; i++) std::cout << array[i-1] << " ";
+	std::cout << "\n";
 
 	solution.reOrderArray(array);
-	for(i = 1; i < argc; i++) std::cout << array[i-1] << std::endl;
+	std::cout << "Reordered array: ";
+	for(i = 1; i < argc; i++) std::cout << array[i-1] << " ";
+	std::cout << "\n";
 	return 0;
 }
