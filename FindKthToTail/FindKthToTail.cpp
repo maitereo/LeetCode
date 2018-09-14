@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
 
-
 struct ListNode
 {
 	int val;
