@@ -37,6 +37,9 @@ public:
     }
 };
 
+// This function takes input of <Number of Nodes, Target to Find>
+// e.g. $ ./Solution 50 10
+// Create 50 nodes with ascending order and find the 10th lase value of the list.
 int main(int ac, char* av[])
 {
 	if(ac < 3)
