@@ -1,1 +1,1 @@
-Repository for LeetCode exercises.
+Repository for LeetCode and Nowcoder exercises.
