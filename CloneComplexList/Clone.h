@@ -20,13 +20,6 @@ public:
 
         for(piter = phead1; piter != NULL; piter = piter->next->next) // connect random 
             if(piter->random) piter->next->random = piter->random->next;
-        // std::cout << "connect finished\n";
-
-        RandomListNode *ppiter;
-        // std::cout << "inserted\nlable\t  piter\t\t  next\t\t  random\n";
-        // for(ppiter = phead1; ppiter != NULL; ppiter = ppiter->next)
-        //     std::cout << ppiter->label << "\t" << ppiter << "\t" << ppiter->next << "\t" << ppiter->random << std::endl;
-        // std::cout << "insert finished\n";
 
         phead2 = phead1->next;
         for(piter = phead1; piter != NULL; piter = piter->next) // split
@@ -40,17 +33,6 @@ public:
                 piter->next = NULL;
             }
         }
-
-        // std::cout << "phead1:\nlable\t  piter\t\t  next\t\t  random\n";
-        // for(ppiter = phead1; ppiter != NULL; ppiter = ppiter->next)
-        //     std::cout << ppiter->label << "\t" << ppiter << "\t" << ppiter->next << "\t" << ppiter->random << std::endl;
-        // std::cout << "insert finished\n";
-
-        // std::cout << "phead2:\nlable\t  piter\t\t  next\t\t  random\n";
-        // for(ppiter = phead2; ppiter != NULL; ppiter = ppiter->next)
-        //     std::cout << ppiter->label << "\t" << ppiter << "\t" << ppiter->next << "\t" << ppiter->random << std::endl;
-        // std::cout << "insert finished\n";
-
         return phead2;
     }
 };
