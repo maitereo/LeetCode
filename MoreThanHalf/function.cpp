@@ -3,7 +3,19 @@
 /* Idea:
 1. Return 0 if input vector is empty
 
-2. 
+2. Set <reference> element to be the 1st in the <array>, and the
+<current> element to be the one next to the <reference>. Default
+value of <counter> is 1.
+
+3. Compare <reference> and <current>, count up if match, otherwise
+don't count. Move <current> to next element until reach the end of
+the <array>. 
+
+4. Return <reference> at any the moment that <counter>*2 is greater 
+than size of the <array>.
+
+5. Move <reference> to the next element until reach the middle
+element position. If no return has been triggered, return 0.
 */
 // int Solution::MoreThanHalfNum_Solution(std::vector<int> numbers)
 // {
